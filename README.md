@@ -1,1 +1,1 @@
-# JUMP-Project1
+# JUMP
