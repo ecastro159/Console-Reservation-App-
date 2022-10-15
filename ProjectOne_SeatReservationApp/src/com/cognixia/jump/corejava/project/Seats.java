@@ -1,6 +1,5 @@
 package com.cognixia.jump.corejava.project;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.*;
 
 
@@ -116,13 +115,13 @@ public class Seats {
 	public void addingNames(String seat, String name) {
 		guests.put(seat, name);
 	};
-	//Print Guest List
+	//Print Guest List and Seats
 	public void printGuestList() {
 		for(Map.Entry<String, String> list: guests.entrySet()) {
-			System.out.println("Guest Name: "+list.getValue()+ "Guest Seat: "+ list.getKey());
+			System.out.println("Guest Name: "+list.getValue()+ "  Seat: "+ list.getKey());
 		}
-		System.out.println("Funtion works but not loop");
 	}
+	
 	public boolean checkEmptyList() {
 		return guests.isEmpty();
 		}

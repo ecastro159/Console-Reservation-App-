@@ -1,9 +1,7 @@
 package com.cognixia.jump.corejava.project;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.Arrays;
+
 public class TheaterSeatReservation {
 
 	public static void main(String[] args) {
@@ -17,15 +15,15 @@ public class TheaterSeatReservation {
 			if(start.check()) {		
 				start.runProgram(sc);	
 			}
-			
-			
 			else {
 				System.out.println("Print Guest list? Y/N");
 				String input = sc.nextLine().trim().toUpperCase();
-				if(input =="Y") {
+				if(input.equals("Y")) {
+					System.out.println("Selected yes");
 					start.printList();
 					break;
 				}else 
+					System.out.println("Selected no");
 					break;
 				}
 			}

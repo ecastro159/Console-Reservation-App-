@@ -2,8 +2,7 @@ package com.cognixia.jump.corejava.project;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class UserInput {
 	//Sets Up New Seat Class
@@ -121,7 +120,7 @@ public class UserInput {
 
 	//Gets Name
 	public void personName(Scanner sc) {
-		String name = sc.nextLine().trim().toLowerCase();
+		String name = sc.nextLine().trim();
 		setName(name);
 	}
 	
@@ -129,6 +128,7 @@ public class UserInput {
 	public boolean check() {
 		return myTheatre.checkEmptyList();
 	}
+	//Print List
 	public void printList() {
 		myTheatre.printGuestList();
 	}
