@@ -112,7 +112,7 @@ public class Seats {
 	
 	
 	//Extras 
-	
+	//Adding and Removing names
 	public void addingNames(String seat, String name) {
 		guests.put(seat, name);
 	};
