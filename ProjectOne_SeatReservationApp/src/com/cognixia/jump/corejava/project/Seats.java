@@ -116,6 +116,7 @@ public class Seats {
 	public void addingNames(String seat, String name) {
 		guests.put(seat, name);
 	};
+	//Print Guest List
 	public void printGuestList() {
 		for(Map.Entry<String, String> list: guests.entrySet()) {
 			System.out.println("Guest Name: "+list.getValue()+ "Guest Seat: "+ list.getKey());
