@@ -74,7 +74,7 @@ public class Seats {
 		
 	}
 
-	//Marks Seat As Taken;
+	//Marks Seat as Taken;
 	public void reserveSeat() {
 		seat[seatRow][seatColum] = "XX";
 	}
@@ -102,6 +102,10 @@ public class Seats {
 	
 	//Check if seat is taken;
 	public void taken() {
+		
+		
+		
+		
 		if(seat[seatRow][seatColum].equals("XX")) {
 			setTaken(true);
 		}else {
@@ -120,10 +124,18 @@ public class Seats {
 		for(Map.Entry<String, String> list: guests.entrySet()) {
 			System.out.println("Guest Name: "+list.getValue()+ "  Seat: "+ list.getKey());
 		}
+		System.out.println(" ");
 	}
 	
 	public boolean checkEmptyList() {
 		return guests.isEmpty();
 		}
+	//Delete Reservation and Makes Seat Available Again
+	public void deleteReservation(String seatLocation) {
+		seat[seatRow][seatColum] = seatLocation;
+		guests.remove(seatLocation);
+	};
+		
+		
 	
 	}
