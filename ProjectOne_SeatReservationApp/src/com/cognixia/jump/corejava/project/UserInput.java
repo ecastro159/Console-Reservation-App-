@@ -43,13 +43,11 @@ public class UserInput {
 		System.out.println("Quit program: 		0 ");
 	}
 	//Print Seats
-	//Print Seats
 	public void currentSeats() {
 		System.out.println("\n");
 		myTheatre.println();
 		System.out.println("\n");
 	}
-	//Convert Letter to Number
 	//Change Letter to Number
 	private int rowLettertoNum(char row) {
 		int ans = 0;
@@ -74,7 +72,6 @@ public class UserInput {
 		return ans;
 		
 	}
-	//Seat Selection Loop
 	//Seat Selection Loop
 	public void selectSeat(Scanner sc) {
 		System.out.println("Do you want to resever a seat?");
@@ -110,7 +107,6 @@ public class UserInput {
 		}
 	}
 	//Checks for Valid Seat Input
-	//Checks Valid Input
 	private void validSeatSelection(Scanner sc) {
 		// Checks for valid seat input
 		// If true, sets seatLocation
@@ -142,7 +138,6 @@ public class UserInput {
 			
 	}
 	//Sends Reservation Info
-	//Sends Reservation Info to Seats Class
 	private void tryToReserve() {
 		
 		//Row and Column Variables
@@ -158,12 +153,11 @@ public class UserInput {
 		myTheatre.setSeatRow(rowLettertoNum(rowNum));
 		//Sets Column Number
 		myTheatre.setSeatColum(columnNum);
-		//Envokes Seat Check 
+		//Invokes Seat Check 
 		myTheatre.taken();
 		
 	}
 	//Gets Persons Name
-	//Gets Name
 	public void personName(Scanner sc) {
 		String name = sc.nextLine().trim();
 		setName(name);
@@ -171,8 +165,6 @@ public class UserInput {
 	
 	
 	//Extras 
-	//Check for Empty Guest List
-	//Extra 
 	
 	//Empty list
 	public boolean check() {
@@ -180,7 +172,7 @@ public class UserInput {
 	}
 	//Print List
 	//Prints Guest List
-	public void printList() {
+	public void printGuestList() {
 		myTheatre.printGuestList();
 	}
 	//Delete seat Reservation
@@ -189,16 +181,25 @@ public class UserInput {
 		validSeatSelection(sc);
 		tryToReserve();
 		if(myTheatre.isTaken()) {
-			//Delete reservation
+			//Delete Reservation
 			myTheatre.deleteReservation(seatLocation);
+			System.out.println("Seat Reservation was Deleted");
 		}else {
 			System.out.println("Seat is not reserved");
-		}
-		//deleteReservation(setSeatLocation());
-		
-		
-		
-		
+		}	
 	}
-
+	//Change Seats
+	//TODO Implement Function
+//	public void changeSeats(Scanner sc) {
+//		System.out.println("Choose what reservation to change");
+//		validSeatSelection(sc);
+//		if(myTheatre.isTaken()) {
+//			//Change Reservation
+//			// TODO Take in new seat
+//			// TODO Get Name
+//		}else {
+//			System.out.println("Not a reserved seat");
+//		}
+//	}
+	
 }

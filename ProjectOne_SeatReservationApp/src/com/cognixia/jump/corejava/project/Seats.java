@@ -102,10 +102,7 @@ public class Seats {
 	
 	//Check if seat is taken;
 	public void taken() {
-		
-		
-		
-		
+
 		if(seat[seatRow][seatColum].equals("XX")) {
 			setTaken(true);
 		}else {
@@ -126,7 +123,7 @@ public class Seats {
 		}
 		System.out.println(" ");
 	}
-	
+	//Check if List is Empty
 	public boolean checkEmptyList() {
 		return guests.isEmpty();
 		}
@@ -135,7 +132,8 @@ public class Seats {
 		seat[seatRow][seatColum] = seatLocation;
 		guests.remove(seatLocation);
 	};
-		
+	//Change Seats
+	
 		
 	
 	}

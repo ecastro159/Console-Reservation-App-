@@ -21,7 +21,7 @@ public class TheaterSeatReservation {
 				if(start.check()) {
 					System.out.println("No guest");
 				}else {
-					start.printList();
+					start.printGuestList();
 				}
 			}
 			
@@ -32,6 +32,7 @@ public class TheaterSeatReservation {
 				start.currentSeats();
 				start.deleteSeat(sc);
 			}
+			//TODO Change Reservation Option
 			
 			
 			if(ans.equals("0")) {
