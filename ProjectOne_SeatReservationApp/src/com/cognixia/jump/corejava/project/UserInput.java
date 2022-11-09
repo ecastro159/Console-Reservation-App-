@@ -35,7 +35,7 @@ public class UserInput {
 	//Print Menu
 	public void menu() {
 		System.out.println("Select one of the following: ");
-		System.out.println("See Avalible Seats: 1");
+		System.out.println("See Available Seats: 1");
 		System.out.println("See List of guest:  2");
 		System.out.println("Make a reservation: 3");
 		System.out.println("Delete reservation: 4");
@@ -74,7 +74,7 @@ public class UserInput {
 	}
 	//Seat Selection Loop
 	public void selectSeat(Scanner sc) {
-		System.out.println("Do you want to resever a seat?");
+		System.out.println("Do you want to reserver a seat?");
 		System.out.println("Enter \"Y\" for Yes or \"N\" for No");
 		while(true) {
 			
@@ -100,7 +100,7 @@ public class UserInput {
 				}
 
 				myTheatre.println();
-				System.out.println("Do you want to resever another seat? Y/N?");
+				System.out.println("Do you want to reserver another seat? Y/N?");
 			}
 			
 			
